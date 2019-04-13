@@ -89,7 +89,7 @@ class Psf:
         plt.plot(a, 'k:', marker='.')
         plt.plot(pred, 'r:', marker='.')
         plt.rcParams.update({'font.size' : 20})
-        plt.xlabel('Time',)
+        plt.xlabel('Time')
         plt.ylabel('Values')
         plt.legend(('Original', 'Prediction'), loc='best')
         plt.show()
