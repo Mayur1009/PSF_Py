@@ -12,7 +12,8 @@ The Algorithm Pattern Sequence based Forecasting (PSF) was first proposed by Mar
 * RMSE/MAE Calculation, etc..
 
 
-The following code illustrates PSF package:
+The following examples illustrates PSF package:
+# Example:
 ```python   
 from PSF import Psf
 import pandas as pd
@@ -113,7 +114,7 @@ Output :
 
 ![](.README_images/cbdd3852.png)
 
-Example:
+# Example:
 ```python
 from PSF import Psf
 import pandas as pd
