@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='PSF',
-    version='0.1',
+    name='PSF_Py',
+    version='0.2',
     packages=find_packages(),
     url='https://github.com/Mayur1009/PSF_py',
     license='GPL',
