@@ -1,37 +1,24 @@
-# Function to calculate neighbour and their index in original list.
-
 from re import match
 
-'''
-The is done by converting the list to string and the using the match() function provided in python package "re".
+import numpy as np
+from sklearn.cluster import KMeans
 
-Parameters: 
-            data : array
-                The data find neighbours.
-            
-            w : int
-                Size of window.
-                 
-Returns:
-            neighbour : array
-                Return array of Neighbours
-            
-            n_i : array
-                Returns array of index of neighbours relative to data.
- 
-'''
+
+def _cluster_labels(data, n_clusters):
+    x = np.array(data).reshape(-1, 1)
+    km = KMeans(n_clusters=n_clusters, random_state=1, max_iter=10, init='random').fit(x)
+    cluster_labels = km.labels_
+    return cluster_labels
 
 
 def _neighbours(data, w):
     t = ''.join(str(i) for i in data)
     pattern = data[-w:]
     p = ''.join(str(i) for i in pattern)
-    # print(f'p = {p}')
     neighbour = []
     while len(t) is not 0:
         if match(p, t) and len(t) > w:
             neighbour.append(int(t[w]))
-            # print(f'neighbour = {neighbour}')
             t = t[w:]
         else:
             t = t[1:]
@@ -42,17 +29,14 @@ def _neighbour_index(data, w):
     t = ''.join(str(i) for i in data)
     pattern = data[-w:]
     p = ''.join(str(i) for i in pattern)
-    # print(f'p = {p}')
     n_i = []
     i = 0
     while len(t) is not 0:
         if match(p, t) and len(t) > w:
             i += w
-            # print(f'i = {i}')
             n_i.append(i)
             t = t[w:]
         else:
             t = t[1:]
             i += 1
-            # print(f'i = {i}')
     return n_i
