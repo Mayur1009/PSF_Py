@@ -3,7 +3,7 @@ Version: 0.3\
 Date: 9/4/2019\
 Author: Mayur Shende, Neeraj Bokde\
 Maintainer: Mayur Shende <mayur.k.shende@gmail.com>, Neeraj Bokde <neerajdhanraj@gmail.com>\
-License: GPL (>= 2)\
+License: GPL (>= 3)\
 Packaged: 2019-04-13 17:15:59 UTC\
 
 ### Introduction to Pattern Sequence based Forecasting (PSF) algorithm

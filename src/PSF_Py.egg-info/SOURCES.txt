@@ -1,7 +1,7 @@
 LICENSE
 README.md
 pyproject.toml
-setup.py
+setup.cfg
 src/PSF_Py/__init__.py
 src/PSF_Py/_optimum_k.py
 src/PSF_Py/_optimum_w.py

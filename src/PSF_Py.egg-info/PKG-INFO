@@ -2,10 +2,9 @@ Metadata-Version: 2.1
 Name: PSF-Py
 Version: 0.3
 Summary: PSF: Pattern Sequence-based Forecasting (PSF) algorithm
-Home-page: https://github.com/Mayur1009/PSF_Py
+Home-page: https://github.com/pypa/sampleproject
 Author: Mayur Shende, Neeraj Bokde
 Author-email: mayur.k.shende@gmail.com, neerajdhanraj@gmail.com
-License: GPL >= 3
 Project-URL: Bug Tracker, https://github.com/Mayur1009/PSF_Py/issues
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
@@ -18,7 +17,7 @@ Version: 0.3\
 Date: 9/4/2019\
 Author: Mayur Shende, Neeraj Bokde\
 Maintainer: Mayur Shende <mayur.k.shende@gmail.com>, Neeraj Bokde <neerajdhanraj@gmail.com>\
-License: GPL (>= 2)\
+License: GPL (>= 3)\
 Packaged: 2019-04-13 17:15:59 UTC\
 
 ### Introduction to Pattern Sequence based Forecasting (PSF) algorithm
@@ -37,14 +36,10 @@ The Algorithm Pattern Sequence based Forecasting (PSF) was first proposed by Mar
 ### Example 1:
 
 ```python   
-from PSF import Psf
+from PSF_Py import Psf, get_ts
 import pandas as pd
 
-# Importing csv file
-data = pd.read_csv('nottem.csv')
-
-# Extracting Time Series
-ts = data['nottem']
+ts = get_ts('nottem')
 
 # Creating PSF model for prediction.
 a = Psf(data = ts, cycle = 12)
@@ -140,14 +135,10 @@ Output :
 ### Example 2:
 
 ```python
-from PSF_Py import Psf
+from PSF_Py import Psf, get_ts
 import pandas as pd
 
-# Importing csv file
-data = pd.read_csv('data/penguin.csv')
-
-# Extracting Time Series
-ts = data[data.columns.values[1]]
+ts = get_ts('penguin')
 
 # Creating PSF model for prediction.
 a = Psf(data=ts, cycle=12)
